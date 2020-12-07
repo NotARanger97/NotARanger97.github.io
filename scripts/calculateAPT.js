@@ -6,7 +6,7 @@ function calculateAPT(){
 	var passive = document.getElementById("passive").value;
 	var ki = document.getElementById("ki").value;
 	var crit = document.getElementById("crit").value;
-	var add = document.getElementById("add").value;
+	var add = document.getElementById("add").value / 2;
 	var dm = document.getElementById("dm").value;
 	if (atk == 0 || ls == 0 || links == 0 || passive == 0
 		|| ki == 0 || crit == 0 || add == 0 || dm == 0){
