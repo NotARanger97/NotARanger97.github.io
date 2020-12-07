@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dokkan Calculator</title>
+	<script src="scripts/calculateAPT.js"> </script>
+</head>
+<body>
+	<h1>Dokkan calculator</h1>
+	<p>Insert the data for the unit you want to calculate the apt, then press the button </p>
+	<ul>
+	<label for="atk">ATK Value: </label>
+	<input type="text" id="atk">
+	<label for="ls">Leader Skill: </label>
+	<input type="text" id="ls">
+	<label for="links">Link Gain: </label>
+	<input type="text" id="links"><br><br>
+	<label for="passive">Passive Gain: </label>
+	<input type="text" id="passive">
+	<label for="ki">Ki Multiplier</label>
+	<input type="text" id="ki">
+	<label for="crit">Crit Chanche: </label>
+	<input type="text" id="crit"><br><br>
+	<label for="add">Additional Chanche: </label>
+	<input type="text" id="add">
+	<label for="dm">Damage Multiplier:</label>
+	<input type="text" id="dm">
+	<br><br>
+	<button type="button" onclick="calculateAPT()">Calculate</button>
+	<p> How to use: </p>
+	<ul>
+		<li>ATK Value: here you put the unit ATK value in which you are interested in.</li>
+		<li>Leader Skill: put the Leader skill multiplier, if you have 2 170% leaders
+		the multiplier is 4.4 (1.7*2 + 1).</li>
+		<li>Link Gain: it's the total of links that you want to have active during the
+		calculation, no links active is 1, only fierce battle (20% at lvl 10) is 1.2 and so on.</li>
+		<li>Passive Gain: it's the total of the passive gain a unit gets, if a unit gets a boost pre and post SA, you have to multiply them together (2.2 pre SA and 1.8 post SA means you have to put here 3.96). Ex: a passive of atk +80% is 1.8 (0.8 + 1) 120% is 2.2 and so on.</li>
+		<li>Ki Multiplier: Here you put the Ki Multiplier a unit has, if it's 150% the number to put here is 1.5, for example. Please refer to the dokkan wiki for more info.</li>
+
+
+
+</body>
+</html>
