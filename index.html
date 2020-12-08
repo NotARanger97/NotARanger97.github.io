@@ -15,62 +15,70 @@
 	<div class="desc">
 	<p>Insert the data for the unit you want to calculate the apt, then press the button </p>
 	<form>
-	  <div class="mb-3">
-	    <label for="exampleInputEmail1" class="form-label">Email address</label>
-	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-	    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+	  <div class="form-group row">
+	    <label for="atk" class="col-sm-2 col-form-label">ATK Value</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="atk" placeholder="ATK">
+	    </div>
 	  </div>
-	  <div class="mb-3">
-	    <label for="exampleInputPassword1" class="form-label">Password</label>
-	    <input type="password" class="form-control" id="exampleInputPassword1">
+	  <div class="form-group row">
+	    <label for="ls" class="col-sm-2 col-form-label">Leader Skill</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="ls" placeholder="Leader Skill">
+	    </div>
 	  </div>
-	  <div class="mb-3 form-check">
-	    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-	    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+	  <div class="form-group row">
+	    <label for="links" class="col-sm-2 col-form-label">Link Gain</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="links" placeholder="All Links">
+	    </div>
 	  </div>
-	  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-	<div id="container">
-    <div class="form-container">
-        <form>
-            <div class="column">
-                <label for="atk" class="form-label">ATK Value: </label>
-				<label for="ls" class="form-label">Leader Skill: </label>
-				<label for="links">Link Gain: </label>
-				<label for="passive" class="form-label">Passive Gain: </label>
-				<label for="ki" class="form-label">Ki Multiplier</label>
-				<label for="crit" class="form-label">Crit Chanche: </label>
-				<label for="add" class="form-label">Additional Chanche: </label>
-				<label for="dm" class="form-label">Damage Multiplier:</label>
-				<label for="se" class="form-label">Is it super effective against all types?:</label>
-            </div>
-            	<div class="column">
-		            <input type="text" id="atk" class="form-control">
-					<input type="text" id="ls" class="form-control">
-					<input type="text" id="links" class="form-control">
-					<input type="text" id="passive" class="form-control">
-					<input type="text" id="ki" class="form-control">
-					<input type="text" id="crit" class="form-control">
-					<input type="text" id="add" class="form-control">
-					<input type="text" id="dm" class="form-control">
-					<div class="radiose">
-						<input type="radio" class="form-control" id="yes" name="se" value="yes">
-						  	<label for="yes">yes</label>
-						  	<input type="radio" class="form-control" id="no" name="se" value="no">
-						  	<label for="no">no</label>
-					</div>
-					<button type="button" class="btn btn-primary" onclick="calculateAPT()">Calculate</button>
-            	</div>
-        	</form>
+	  <div class="form-group row">
+	    <label for="passive" class="col-sm-2 col-form-label">Passive Gain</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="passive" placeholder="Passive Total Gain">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="ki" class="col-sm-2 col-form-label">Ki Multiplier</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="ki" placeholder="Ki Multiplier">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="crit" class="col-sm-2 col-form-label">Crit Chanche</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="crit" placeholder="Crit Chanche">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="add" class="col-sm-2 col-form-label">Additional Chanche</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="add" placeholder="Add Chanche">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="dm" class="col-sm-2 col-form-label">Damage Multiplier</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="dm" placeholder="Damage Multiplier">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	  <label for="row" class="form-label">Is it super effective against all types?:</label>
+  		<div class="row">
+    		<div class="form-check form-check-inline">
+      			<input name="gruppo2" type="radio" id="yes" checked>
+      			<label for="yes">Yes</label>
+    		</div>
+    	<div class="form-check form-check-inline">
+      		<input name="gruppo2" type="radio" id="no">
+      		<label for="no">No</label>
     	</div>
-	</div>
-	</div>
-	<div id="container">
-		<div class="inputs">
-			
-			
-		</div>
-	</div>
+  		</div>
+  	</div>
+
+	</form>
+	  <button type="button" class="btn btn-primary"  onclick="calculateAPT()">Calculate</button>
 	<p> How to use: </p>
 	<ul>
 		<li><b>ATK Value:</b> here you put the unit ATK value in which you are interested in.</li>
