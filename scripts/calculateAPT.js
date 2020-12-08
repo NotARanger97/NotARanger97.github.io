@@ -8,16 +8,19 @@ function calculateAPT(){
 	var crit = document.getElementById("crit").value;
 	var add = document.getElementById("add").value / 2;
 	var dm = document.getElementById("dm").value;
+	var SE = 1;
 	if (atk == 0 || ls == 0 || links == 0 || passive == 0
 		|| ki == 0 || crit == 0 || add == 0 || dm == 0){
 		window.alert("parameters empty, please enter all the parameters");
 		exit();
-}
+	}
+	if (document.getElementById("yes").checked)
+		SE = 1.5;
 	var preSA = atk * ls * links * passive * ki;
 	var SA = preSA * dm;
 	var fixedcrit = (0.9 * crit ) + 1;
-	var SACrit = (SA * fixedcrit);
-	var preSACrit = (preSA * fixedcrit);
+	var SACrit = (SA * fixedcrit) * SE;
+	var preSACrit = (preSA * fixedcrit) * SE;
 	result = SACrit + (SACrit * add) + (preSACrit * add);
 	window.alert("your APT is: " + result.toFixed(2));
 }
