@@ -3,34 +3,36 @@
 <head>
 	<title>Dokkan Calculator</title>
 	<script src="scripts/calculateAPT.js"> </script>
+	<style type="text/css" src="styles/style.css"></style>
 </head>
 <body>
 	<h1>Dokkan calculator</h1>
 	<p>Insert the data for the unit you want to calculate the apt, then press the button </p>
-	<ul>
-	<label for="atk">ATK Value: </label>
-	<input type="text" id="atk"><br><br>
-	<label for="ls">Leader Skill: </label>
-	<input type="text" id="ls"><br><br>
-	<label for="links">Link Gain: </label>
-	<input type="text" id="links"><br><br>
-	<label for="passive">Passive Gain: </label>
-	<input type="text" id="passive"><br><br>
-	<label for="ki">Ki Multiplier</label>
-	<input type="text" id="ki"><br><br>
-	<label for="crit">Crit Chanche: </label>
-	<input type="text" id="crit"><br><br>
-	<label for="add">Additional Chanche: </label>
-	<input type="text" id="add"><br><br>
-	<label for="dm">Damage Multiplier:</label>
-	<input type="text" id="dm"><br><br>
-	<p>Is it super effective against all types?:</p>
-  	<input type="radio" id="yes" name="se" value="yes">
-  	<label for="yes">yes</label><br>
-  	<input type="radio" id="no" name="se" value="no">
-  	<label for="no">no</label><br>
-  	<br>
-	<button type="button" onclick="calculateAPT()">Calculate</button>
+	<div class="inputs">
+		<label for="atk">ATK Value: </label>
+		<input type="text" id="atk"><br><br>
+		<label for="ls">Leader Skill: </label>
+		<input type="text" id="ls"><br><br>
+		<label for="links">Link Gain: </label>
+		<input type="text" id="links"><br><br>
+		<label for="passive">Passive Gain: </label>
+		<input type="text" id="passive"><br><br>
+		<label for="ki">Ki Multiplier</label>
+		<input type="text" id="ki"><br><br>
+		<label for="crit">Crit Chanche: </label>
+		<input type="text" id="crit"><br><br>
+		<label for="add">Additional Chanche: </label>
+		<input type="text" id="add"><br><br>
+		<label for="dm">Damage Multiplier:</label>
+		<input type="text" id="dm"><br><br>
+		<p>Is it super effective against all types?:</p>
+	  	<input type="radio" id="yes" name="se" value="yes">
+	  	<label for="yes">yes</label><br>
+	  	<input type="radio" id="no" name="se" value="no">
+	  	<label for="no">no</label><br>
+	  	<br>
+		<button type="button" onclick="calculateAPT()">Calculate</button>
+	</div>
 	<p> How to use: </p>
 	<ul>
 		<li><b>ATK Value:</b> here you put the unit ATK value in which you are interested in.</li>
