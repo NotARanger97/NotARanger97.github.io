@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<title>Dokkan Calculator</title>
+	<title>Dokkan APT Calculator</title>
 	<script src="scripts/calculateAPT.js"> </script>
 	<link rel="stylesheet" href="styles/style.css">
 	<meta charset="utf-8">
@@ -10,87 +10,158 @@
 </head>
 <body>
 	<div class="header">
-		<h1>Dokkan calculator</h1>
+		<h1>Dokkan APT calculator</h1>
 	</div>
 	<div class="desc">
-	<p>Insert the data for the unit you want to calculate the apt, then press the button </p>
+	<p>Insert the data for the unit you want to calculate the apt, then press the button Calculate </p>
 	</div>
 	<div class="m-l">
 	<form>
 	  <div class="form-group row">
 	    <label for="atk" class="col-sm-2 col-form-label">ATK Value</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="atk" placeholder="ATK">
+	      <input type="text" class="form-control margin-bottom" id="atk" placeholder="ATK Value number">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="ls" class="col-sm-2 col-form-label">Leader Skill</label>
+	    <label for="ls" class="col-sm-2 col-form-label">Leader Skill %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="ls" placeholder="Leader Skill">
+	      <input type="text" class="form-control margin-bottom" id="ls" placeholder="Leader Skill, Ex: 170">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="links" class="col-sm-2 col-form-label">Link Gain</label>
+	    <label for="links" class="col-sm-2 col-form-label">Link Gain %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="links" placeholder="All Links">
+	      <input type="text" class="form-control margin-bottom" id="links" placeholder="All Links, Ex: 50">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="passive" class="col-sm-2 col-form-label">Passive Gain</label>
+	    <label for="passive1" class="col-sm-2 col-form-label">Base Passive Gain %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="passive" placeholder="Passive Total Gain">
+	      <input type="text" class="form-control margin-bottom" id="passive1" placeholder="Base Passive Gain at start of turn, ex 120">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="ki" class="col-sm-2 col-form-label">Ki Multiplier</label>
+	    <label for="passive2" class="col-sm-2 col-form-label">Passive Gain on SA %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="ki" placeholder="Ki Multiplier">
+	      <input type="text" class="form-control margin-bottom" id="passive2" placeholder="Passive Gain on SA, ex 80% when performing a SA">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="crit" class="col-sm-2 col-form-label">Crit Chanche</label>
+	    <label for="ki" class="col-sm-2 col-form-label">Ki Multiplier %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="crit" placeholder="Crit Chanche">
+	      <input type="text" class="form-control margin-bottom" id="ki" placeholder="Ki Multiplier, Ex: 150">
 	    </div>
 	  </div>
 	  <div class="form-group row">
-	    <label for="add" class="col-sm-2 col-form-label">Additional Chanche</label>
+	    <label for="crit" class="col-sm-2 col-form-label">Crit Chanche %</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="add" placeholder="Add Chanche">
+	      <input type="text" class="form-control margin-bottom" id="crit1" placeholder="Crit Chanche from Hidden Potential (simply insert the level)">
+	      <input type="text" class="form-control margin-bottom" id="crit2" placeholder="Crit Chanche from Passive">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="add" class="col-sm-2 col-form-label">Additional Chanche %</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control margin-bottom" id="add1" placeholder="Add Chanche from Hidden Potential (simply insert the level)">
+	      <input type="text" class="form-control margin-bottom" id="add2" placeholder="Add Chanche from Passive">
 	    </div>
 	  </div>
 	  <div class="form-group row">
 	    <label for="dm" class="col-sm-2 col-form-label">Damage Multiplier</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control margin-bottom" id="dm" placeholder="Damage Multiplier">
+	      <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="supreme">
+		    <label class="form-check-label" for="supreme">Supreme</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="immense">
+		    <label class="form-check-label" for="immense">Immense</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="Colossal">
+		    <label class="form-check-label" for="Colossal">Colossal</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="Mega-Colossal">
+		    <label class="form-check-label" for="Mega-Colossal">Mega-Colossal</label>
+		  </div>
 	    </div>
 	  </div>
-	  <label for="radiose" class="col-sm-2 col-form-label">Is it super effective against all types?</label>
-	  <div id="radiose">
+	  <div class="form-group row">
+	    <label for="dm" class="col-sm-2 col-form-label">SA Level</label>
+	    <div class="col-sm-10">
+	      <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="SA10">
+		    <label class="form-check-label" for="SA10">10</label>
+		  </div>
 		  <div class="form-check form-check-inline">
-		    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="SA15">
+		    <label class="form-check-label" for="SA15">15</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="SA20">
+		    <label class="form-check-label" for="SA20">20</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="SA25">
+		    <label class="form-check-label" for="SA25">25</label>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="SABoost" class="col-sm-2 col-form-label">Hidden Potential SA Boost</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control margin-bottom" id="SABoost" placeholder="SA Boost, Ex: 6 for a 55% unit">
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="dm" class="col-sm-2 col-form-label">Raises Attack?</label>
+	    <div class="col-sm-10">
+	      <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="NoRaise">
+		    <label class="form-check-label" for="NoRaise">No</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="30Raise">
+		    <label class="form-check-label" for="30Raise">Raises Attack</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="50Raise">
+		    <label class="form-check-label" for="50Raise">Greatly Raises</label>
+		  </div>
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="100Raise">
+		    <label class="form-check-label" for="100Raise">Massively Raises</label>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="form-group row">
+	    <label for="radiose" class="col-sm-2 col-form-label">Is it super effective against all types?</label>
+	    <div class="col-sm-10">
+		  <div class="form-check form-check-inline">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="yes">
 		    <label class="form-check-label" for="yes">Yes</label>
 		  </div>
 		  <div class="form-check form-check-inline">
-		    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no">
+		    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="no">
 		    <label class="form-check-label" for="no">No</label>
 		  </div>
 		</div>
 
 	</form>
-	  <button type="button" class="btn btn-primary"  onclick="calculateAPT()">Calculate</button>
+	  <button type="button" class="btn btn-primary" onclick="calculateAPT()">Calculate</button>
  <br><br>
 	<p> <b>How to use: </b> </p>
 	<ul class="list-group">
 		<li class="list-group-item"><b>ATK Value:</b> here you put the unit ATK value in which you are interested in.</li>
-		<li class="list-group-item"><b>Leader Skill:</b> put the Leader skill multiplier, if you have 2 170% leaders
-		the multiplier is 4.4 (1.7*2 + 1).</li>
+		<li class="list-group-item"><b>Leader Skill:</b> put the Leader skill multiplier.</li>
 		<li class="list-group-item"><b>Link Gain:</b> it's the total of links that you want to have active during the
-		calculation, no links active is 1, only fierce battle (20% at lvl 10) is 1.2 and so on.</li>
-		<li class="list-group-item"><b>Passive Gain:</b> it's the total of the passive gain a unit gets, if a unit gets a boost pre and post SA, you have to multiply them together (2.2 pre SA and 1.8 post SA means you have to put here 3.96). Ex: a passive of atk +80% is 1.8 (0.8 + 1) 120% is 2.2 and so on.</li>
-		<li class="list-group-item"><b>Ki Multiplier:</b> Here you put the Ki Multiplier a unit has, if it's 150% the number to put here is 1.5, for example. Please refer to the dokkan wiki for more info.</li>
-		<li class="list-group-item"><b>Additional Chanche and Crit Chanche:</b> here you put the total additional and crit chanche from the potential system or passive(50% means 0.5, 20% 0.2, 100% 1). </li>
-		<li class="list-group-item"><b>Damage Multiplier:</b> here you put the total damage multiplier, so th sum of hidden potential, Unit Damage(immense, supreme) and SA effects (Raises Attack). </li>
+		calculation, no links active is 0</li>
+		<li class="list-group-item"><b>Passive Gain:</b> It consist of passive Gain before and After Super Attack, if a unit Has only a passive Gain at start of turn you can leave The Passive Gain on SA field empty and viceversa, if it's both you have to insert both values</li>
+		<li class="list-group-item"><b>Ki Multiplier:</b> Here you put the Ki Multiplier a unit has, if it's 150% the number to put here is 150 for example. Please refer to the <a href="https://dbz-dokkanbattle.fandom.com/wiki/Ki_Multipliers">Dokkan Wiki</a> for more info on what ki multiplier means.</li>
+		<li class="list-group-item"><b>Additional Chanche and Crit Chanche:</b> here you put the total additional and crit chanche from the potential system and passive, for example if a unit has no crit chanche from passive you can leave it empty and viceversa. Medium is 25, high 50 and great is 70</li>
+		<li class="list-group-item"><b>Disclaimer</b> This is not a 100% Accurate APT calc, you can use this tool to have an idea of what a unit can accomplish, but actual numbers may differ, this tool cannot currently calc correctly units with additional super attacks in passive or units with counters.</li>
 	</ul>
 </div>
 
