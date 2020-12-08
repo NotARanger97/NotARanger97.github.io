@@ -18,9 +18,9 @@ function calculateAPT(){
 		SE = 1.5;
 	var preSA = atk * ls * links * passive * ki;
 	var SA = preSA * dm;
-	var fixedcrit = (0.9 * crit ) + 1;
-	var SACrit = (SA * fixedcrit) * SE;
-	var preSACrit = (preSA * fixedcrit) * SE;
+	var fixedcrit = (1.9 * crit) + (SE * (1-crit));
+	var SACrit = (SA * fixedcrit);
+	var preSACrit = (preSA * fixedcrit);
 	result = SACrit + (SACrit * add) + (preSACrit * add);
 	window.alert("your APT is: " + result.toFixed(2));
 }
