@@ -11,5 +11,8 @@
 .margin-bottom {
 margin-bottom:15px;}
 body {
-  margin:20px;
+  padding: 25px;
+}
+@media screen and (max-width: 767px) {
+body {margin: 0;}
 }
