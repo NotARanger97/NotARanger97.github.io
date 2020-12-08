@@ -3,35 +3,54 @@
 <head>
 	<title>Dokkan Calculator</title>
 	<script src="scripts/calculateAPT.js"> </script>
-	<style type="text/css" src="styles/style.css"></style>
+	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<h1>Dokkan calculator</h1>
+	<div class="header">
+		<h1>Dokkan calculator</h1>
+	</div>
+	<div class="desc">
 	<p>Insert the data for the unit you want to calculate the apt, then press the button </p>
-	<div class="inputs">
-		<label for="atk">ATK Value: </label>
-		<input type="text" id="atk"><br><br>
-		<label for="ls">Leader Skill: </label>
-		<input type="text" id="ls"><br><br>
-		<label for="links">Link Gain: </label>
-		<input type="text" id="links"><br><br>
-		<label for="passive">Passive Gain: </label>
-		<input type="text" id="passive"><br><br>
-		<label for="ki">Ki Multiplier</label>
-		<input type="text" id="ki"><br><br>
-		<label for="crit">Crit Chanche: </label>
-		<input type="text" id="crit"><br><br>
-		<label for="add">Additional Chanche: </label>
-		<input type="text" id="add"><br><br>
-		<label for="dm">Damage Multiplier:</label>
-		<input type="text" id="dm"><br><br>
-		<p>Is it super effective against all types?:</p>
-	  	<input type="radio" id="yes" name="se" value="yes">
-	  	<label for="yes">yes</label><br>
-	  	<input type="radio" id="no" name="se" value="no">
-	  	<label for="no">no</label><br>
-	  	<br>
-		<button type="button" onclick="calculateAPT()">Calculate</button>
+	<div id="container">
+    <div class="form-container">
+        <form>
+            <div class="column">
+                <label for="atk" style="text_align:left">ATK Value: </label>
+				<label for="ls">Leader Skill: </label>
+				<label for="links">Link Gain: </label>
+				<label for="passive">Passive Gain: </label>
+				<label for="ki">Ki Multiplier</label>
+				<label for="crit">Crit Chanche: </label>
+				<label for="add">Additional Chanche: </label>
+				<label for="dm">Damage Multiplier:</label>
+				<label for="se">Is it super effective against all types?:</label>
+            </div>
+            	<div class="column">
+		            <input type="text" id="atk">
+					<input type="text" id="ls">
+					<input type="text" id="links">
+					<input type="text" id="passive">
+					<input type="text" id="ki">
+					<input type="text" id="crit">
+					<input type="text" id="add">
+					<input type="text" id="dm">
+					<div class="radiose">
+						<input type="radio" id="yes" name="se" value="yes">
+						  	<label for="yes">yes</label>
+						  	<input type="radio" id="no" name="se" value="no">
+						  	<label for="no">no</label>
+					</div>
+					<button type="button" onclick="calculateAPT()">Calculate</button>
+            	</div>
+        	</form>
+    	</div>
+	</div>
+	</div>
+	<div id="container">
+		<div class="inputs">
+			
+			
+		</div>
 	</div>
 	<p> How to use: </p>
 	<ul>
