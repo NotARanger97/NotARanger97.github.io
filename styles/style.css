@@ -8,48 +8,8 @@
 .desc {
 	text-align: center;
 }
-#container {
-    text-align: center;    
-}
-
-#container .form-container {
-    display: inline-block;
-}
-#container form .column .radiose{
-	display: inline-block;
-	flex-direction: row;
-}
-input[type="radio"] {
-  margin-left: 0;
-}
-
-#container form {
-    background: #eee;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 50px;
-}
-
-#container form .column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-#container form .column label {
-    padding: 2px;
-    text-align: left;
-}
-
-#container form .column input, 
-#container form .column textarea {
-    align-self: flex-start;
-    width: 200px;
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  #container form{
-    width: 100%;
-  }
+.margin-bottom {
+margin-bottom:15px;}
+body {
+  margin:50px;
 }
